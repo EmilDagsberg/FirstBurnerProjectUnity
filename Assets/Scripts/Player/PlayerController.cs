@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        Debug.Log($"Player is grounded : {isGrounded}");
+        //Debug.Log($"Player is grounded : {isGrounded}");
 
         bool isSprinting = inputActions.Player.Sprint.IsPressed();
         float currentSpeed = isSprinting ? sprintSpeed : movementSpeed;

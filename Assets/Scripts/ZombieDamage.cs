@@ -7,9 +7,10 @@ public class ZombieDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Zombie hit: " + other.name);
         if (!other.CompareTag("Player")) return;
 
-        PlayerHealth health = other.GetComponent<PlayerHealth>();
+        PlayerHealth health = other.GetComponentInParent<PlayerHealth>();
         if (health != null)
         {
             health.TakeDamage(damage);
